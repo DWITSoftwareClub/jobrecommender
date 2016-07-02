@@ -1,0 +1,177 @@
+﻿@model RegisterViewModel
+
+<form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+    <h4>Create a new account.</h4>
+    <h4>One page, four steps, and your profile are ready on their way!</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Step 1: Personal Details </h3>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+
+                <div class="form-group">
+                    <label asp-for="FirstName" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LastName" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MobileNo" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="MobileNo" class="form-control" />
+                        <span asp-validation-for="MobileNo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CurrentAddress" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="CurrentAddress" class="form-control" />
+                        <span asp-validation-for="CurrentAddress" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PermanentAddress" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="PermanentAddress" class="form-control" />
+                        <span asp-validation-for="PermanentAddress" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gender" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Gender" class="form-control" />
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MaritalStatus" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="MaritalStatus" class="form-control" />
+                        <span asp-validation-for="MaritalStatus" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Step 2: Career Details </h3>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <div class="form-group">
+                    <label asp-for="LookingFor" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="LookingFor" class="form-control" />
+                        <span asp-validation-for="LookingFor" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CareerPlan" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="CareerPlan" class="form-control" />
+                        <span asp-validation-for="CareerPlan" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ExceptedSalary" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="ExceptedSalary" class="form-control" />
+                        <span asp-validation-for="ExceptedSalary" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Step 3: Job Preferences </h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label asp-for="FirstPreference" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="FirstPreference" class="form-control" />
+                    <span asp-validation-for="FirstPreference" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondPreference" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="SecondPreference" class="form-control" />
+                    <span asp-validation-for="SecondPreference" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobLocation" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="JobLocation" class="form-control" />
+                    <span asp-validation-for="JobLocation" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Step 4: Login Details </h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label asp-for="Email" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Register</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -1,0 +1,60 @@
+@model WebApp.Models.WebApp.JobInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.deadline)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deadline)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employeer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.employeer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.employeerLogo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.employeerLogo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.jobDescriptions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.jobDescriptions)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.jobTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.jobTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.requirements)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.requirements)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.views)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.views)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.jobID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
