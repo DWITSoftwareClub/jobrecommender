@@ -20,7 +20,7 @@ namespace WebApp.Controllers
         public IActionResult Index() {
 
            
-            return View(_data());
+            return View();
         }
 
       
